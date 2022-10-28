@@ -9,7 +9,7 @@
 <body>
     {% for i in car %}
         <h1>{{ i.name }}</h1>
-        <img src="{{ i.img.url }}" alt="">
+        <a href="{% url 'home_detail' i.slug %}"><img src="{{ i.img.url }}" width="500px" alt=""></a>
         <h3>{{ i.price }}</h3>
     {% endfor %}
 </body>
